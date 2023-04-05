@@ -1,0 +1,20 @@
+print('='*17)
+print('BANCO PORTELLA')
+print('='*17)
+value = int(input('Que valor você quer sacar? R$ '))
+score = True
+while score != 0:
+    score = value/50
+    print(f'{score:.0f} cédulas de 50')
+    if value % 50 != 0:
+        score = (value % 50)/20
+        print(f'{score:.0f} cédulas de 20')
+        if value % 20 != 0:
+            score = (value % 20)/10
+            print(f'{score:.0f} cédulas de 10')
+            if value % 20 != 0:
+                score = (value % 20)/1
+                print(f'{score:.0f} cédulas de 1')
+    break
+print('='*48)
+print('Volte sempre ao BANCO PORTELLA! Tenha um bom dia!')
